@@ -48,22 +48,16 @@ int main()
     n1 = gen_random_num();
     n2 = gen_random_num();
     n3 = gen_random_num();
-    Color colorOne{n1, n2, n3};     // Color objects initiaized
+    Color colorOne{n1, n2, n3};    // Full color constructor called
     
     n1 = gen_random_num();
     n2 = gen_random_num();
-    n3 = gen_random_num();
-    Color colorTwo{n1, n2, n3};
-    
+    Color colorTwo{n1, n2};    // Partial constructor called
+
     n1 = gen_random_num();
-    n2 = gen_random_num();
-    n3 = gen_random_num();
-    Color colorThree{n1, n2, n3};
+    Color colorThree{n1};    // Partial constructor called
     
-    n1 = gen_random_num();
-    n2 = gen_random_num();
-    n3 = gen_random_num();
-    Color colorFour{n1, n2, n3};
+    Color colorFour;    // Default constructor called
     
     cout << "Color 1\n";    // Each color outputted via the print_colors member function
     colorOne.print_colors();
@@ -79,7 +73,6 @@ int main()
     
     return 0;
 }
-
 
 int gen_random_num()     // Function definition to generate random number
 {
