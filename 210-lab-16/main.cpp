@@ -58,8 +58,6 @@ int main()
     n3 = gen_random_num();
     Color colorFour{n1, n2, n3};
     
-   
-    
     cout << "Color 1\n";    // Each color outputted via the print_colors member function
     colorOne.print_colors();
     cout << "---------" << endl;
