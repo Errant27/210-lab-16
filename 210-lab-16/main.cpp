@@ -11,17 +11,24 @@ private:
     int green;
     
 public:
+    Color () { red = 0;  green = 0; blue = 0; } // Default Color constructor
+
+    Color (int num1) : red{ num1 }    // Color constructor with one paramter
+    { blue = 0; green = 0; }
+    
+    Color (int num1, int num2) : red{ num1 }, green{ num2 }    // Color constructor with two paramters
+    { blue = 0; }
+    
     Color (int num1, int num2, int num3) : red{ num1 }, blue{ num2 }, green{ num3 }
-    {}
+    {}    // Color constructor with full paramters
     
     void setRed(int r) { red = r; }    // Setter Functions
-    void setBlue(int b) { blue = b; }
     void setGreen(int g) { green = g; }
+    void setBlue(int b) { blue = b; }
     
     int getRed() { return red; }    // Getter Functions
-    int getBlue() { return blue; }
     int setGreen() { return green; }
-    
+    int getBlue() { return blue; }
     
     void print_colors() {     // Print Function
         cout << "R: " << red << endl;
